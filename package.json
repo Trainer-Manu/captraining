@@ -25,8 +25,5 @@
       "auth": "xsuaa",
       "db": "hana"
     }
-  },
-  "sapux": [
-    "app/caphanafiori"
-  ]
+  }
 }

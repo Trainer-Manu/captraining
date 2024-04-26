@@ -1,4 +1,4 @@
-using {managed, Country, sap} from '@sap/cds/common';
+using { Country} from '@sap/cds/common';
 
 namespace cap.hana.app;
 
