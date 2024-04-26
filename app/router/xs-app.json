@@ -1,5 +1,5 @@
 {
-  "authenticatedMethod": "route",
+  "authenticatedMethod": "route", 
   "routes": [
     {
       "source": "^/app/(.*)$",
