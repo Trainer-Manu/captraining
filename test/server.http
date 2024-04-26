@@ -1,0 +1,53 @@
+@server=http://localhost:4004
+
+@service=/odata/v4/catalog
+
+###
+GET {{server}}{{service}}/Interaction_Header
+
+###
+GET {{server}}{{service}}/Interaction_Items
+
+###
+GET {{server}}{{service}}/Countries
+
+###
+POST {{server}}{{service}}/Interaction_Header
+Content-Type: application/json
+
+{
+"ID": 125,
+"PARTNER": "TCS",
+"LOG_DATE": null,
+"BPCOUNTRY_code": "IND"
+}
+
+###
+
+POST {{server}}{{service}}/Interaction_Items
+Content-Type: application/json
+
+{
+    "INTHeader_ID": 201,
+    "TEXT_ID": "USA",
+    "LANGU": "EN",
+    "LOGTEXT": "USA IS A GREAT COUNTRY"
+}
+
+
+###
+PATCH {{server}}{{service}}/Interaction_Header/125
+Content-Type: application/json
+
+{
+   "ID": 125,
+   "PARTNER": "SAP",
+    "LOG_DATE": null,
+    "BPCOUNTRY_code": "GR"
+}
+
+###
+DELETE {{server}}{{service}}/Interaction_Header/125
+
+
+

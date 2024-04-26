@@ -1,0 +1,29 @@
+{
+  "authenticatedMethod": "route",
+  "routes": [
+    {
+      "source": "^/app/(.*)$",
+      "target": "$1",
+      "localDir": ".",
+      "cacheControl": "no-cache, no-store, must-revalidate",
+      "authenticatedType": "xsuaa"
+    },
+    {
+    "source":"^/appconfig/",
+    "localDir":".",
+    "cacheControl": "no-cache, no-store, must-revalidate"
+    },
+    {
+      "source":"^/user-api(.*)/",
+      "target": "$1",
+      "cacheControl": "sap-approuter-userapi"
+    },
+    {
+      "source": "^/(.*)$",
+      "target": "$1",
+      "destination": "srv-api",
+      "csrfProtection": true,
+      "authenticatedType": "xsuaa"
+    }
+  ]
+}
